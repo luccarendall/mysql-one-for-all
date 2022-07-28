@@ -33,4 +33,20 @@ VALUES
   ("Carol", 19, 3, "2018-02-14"),
   ("Angelina", 42, 2, "2018-04-29"),
   ("Paul", 46, 2, "2017-01-17");
+
 ---------------------------------------------
+CREATE TABLE IF NOT EXISTS SpotifyClone.plano (
+  plano_id INT NOT NULL AUTO_INCREMENT,
+  plano VARCHAR(45) NOT NULL,
+  valor DECIMAL(5,2) NOT NULL,
+  PRIMARY KEY (plano_id))
+ENGINE = InnoDB;
+
+INSERT INTO SpotifyClone.plano (plano, valor)
+VALUES 
+  ("gratuito", 0),
+  ("familiar", 7.99),
+  ("universitário", 5.99),
+  ("pessoal", 6.99);
+
+  ---------------------------------------------
