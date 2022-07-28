@@ -64,3 +64,29 @@ VALUES
   ("Freedie Shannon"),
   ("Tyler Isle"),
   ("Fog");
+  
+---------------------------------------------
+CREATE TABLE IF NOT EXISTS SpotifyClone.album (
+  album_id INT NOT NULL AUTO_INCREMENT,
+  album_name VARCHAR(45) NOT NULL,
+  artista_id INT NOT NULL,
+  ano_lancamento YEAR NOT NULL,
+  PRIMARY KEY (album_id),
+  FOREIGN KEY (artista_id)
+  REFERENCES SpotifyClone.artista(artista_id)
+)
+ENGINE = InnoDB;
+
+
+INSERT INTO SpotifyClone.album (album_name, artista_id, ano_lancamento)
+VALUES 
+  ("Envious", 1, 1990),
+  ("Exuberant", 1, 1993),
+  ("Hallowed Steam", 2, 1995),
+  ("Incandescent", 3, 1998),
+  ("Temporary Culture", 4, 2001),
+  ("Library of liberty", 4, 2003),
+  ("Chained Down", 5, 2007),
+  ("Cabinet of fools", 5, 2012),
+  ("No guarantees", 5, 2015),
+  ("Apparatus", 6, 2015);
