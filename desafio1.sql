@@ -64,7 +64,7 @@ VALUES
   ("Freedie Shannon"),
   ("Tyler Isle"),
   ("Fog");
-  
+
 ---------------------------------------------
 CREATE TABLE IF NOT EXISTS SpotifyClone.album (
   album_id INT NOT NULL AUTO_INCREMENT,
@@ -90,3 +90,15 @@ VALUES
   ("Cabinet of fools", 5, 2012),
   ("No guarantees", 5, 2015),
   ("Apparatus", 6, 2015);
+
+---------------------------------------------
+CREATE TABLE IF NOT EXISTS SpotifyClone.musica (
+  musica_id INT NOT NULL AUTO_INCREMENT,
+  musica VARCHAR(45) NOT NULL,
+  duracao_segundos INT NOT NULL,
+  album_id INT NOT NULL,
+  PRIMARY KEY (musica_id),
+    FOREIGN KEY (album_id)
+    REFERENCES SpotifyClone.album(album_id)
+)
+ENGINE = InnoDB;
