@@ -50,3 +50,17 @@ VALUES
   ("pessoal", 6.99);
 
   ---------------------------------------------
+  CREATE TABLE IF NOT EXISTS SpotifyClone.artista (
+  artista_id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(45) NOT NULL,
+  PRIMARY KEY (artista_id))
+ENGINE = InnoDB;
+
+INSERT INTO SpotifyClone.artista (artista)
+VALUES
+  ("Walter Phoenix"),
+  ("Peter Strong"),
+  ("Lance Day"),
+  ("Freedie Shannon"),
+  ("Tyler Isle"),
+  ("Fog");
