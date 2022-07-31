@@ -8,5 +8,5 @@ INNER JOIN SpotifyClone.historico_reproducao AS hR
 
 GROUP BY musica
 
-ORDER BY COUNT(hR.usuario_id) DESC, cancao
+ORDER BY reproducoes DESC, cancao
 LIMIT 2
