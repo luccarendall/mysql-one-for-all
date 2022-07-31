@@ -1,7 +1,7 @@
 SELECT 
   
   DISTINCT user.usuario AS usuario,
-  IF( MAX(YEAR(hR.data_reproducao)) = 2021, "Usuário ativo", "Usuário inativo") AS condicao_usuario
+  IF( MAX(YEAR(hR.data_hora_reproducao)) = 2021, "Usuário ativo", "Usuário inativo") AS condicao_usuario
 
 FROM SpotifyClone.usuario AS user
 

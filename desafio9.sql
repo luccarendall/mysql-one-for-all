@@ -1,4 +1,4 @@
-SELECT COUNT(hR.cancao_id) AS quantidade_musicas_no_historico
+SELECT COUNT(hR.musica_id) AS quantidade_musicas_no_historico
 
 FROM SpotifyClone.historico_reproducao AS hR
 
